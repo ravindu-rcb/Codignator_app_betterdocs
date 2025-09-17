@@ -69,8 +69,8 @@
         </a>
 
         <a href="<?php echo site_url('concession/new'); ?>"
-            class="<?php echo ($active==='concession' && $method==='new') ? 'active' : ''; ?>">
-            New Concession
+          class="<?php echo ($active==='concession' && $method==='new_form') ? 'active' : ''; ?>">
+          New Concession
         </a>
         <a href="<?php echo site_url('ticket-booking'); ?>"
             class="<?php echo $active==='ticketbooking' ? 'active' : ''; ?>">

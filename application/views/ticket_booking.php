@@ -50,12 +50,7 @@
 </section>
 
 <!-- floating Help -->
-<button class="fab" onclick="openHelp('add-movie-event')" title="Open help">
-  <svg viewBox="0 0 24 24" fill="none">
-    <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 14.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Zm1.2-9.4c1.62.44 2.8 1.8 2.8 3.4 0 1.38-.8 2.44-2.02 3.22-.52.32-.88.86-.98 1.48l-.05.3h-1.9l.06-.36c.2-1.26.94-2.16 1.94-2.78.84-.52 1.25-1.08 1.25-1.86 0-.88-.66-1.6-1.64-1.86-1.24-.34-2.48.3-2.9 1.5l-1.78-.62c.68-1.98 2.88-3.08 4.92-2.56Z" fill="currentColor"/>
-  </svg>
-  Help
-</button>
+<button class="fab" onclick="openHelp('<?php echo $doc_slug; ?>')" title="Open help">Help</button>
 
 
 <div class="overlay" id="overlay"></div>

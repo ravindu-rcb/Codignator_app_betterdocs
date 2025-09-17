@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  php-env:
+    build: .
+    volumes:
+      - .:/var/www/html
+      - "./.htaccess:/var/www/html/.htaccess"
+    ports:
+      - 9300:80
+ 

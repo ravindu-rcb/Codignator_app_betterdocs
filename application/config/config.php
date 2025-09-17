@@ -1,7 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://localhost/ci3app/';
+$config['base_url'] = 'http://localhost:9300/';
+// or dynamic (works on other ports/hosts too)
+$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http')
+                    . '://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\') . '/';
 $config['index_page'] = '';
 $config['encryption_key'] = '7f3a1c9b2d4e5f60718293a4b5c6d7e8091a2b3c4d5e6f708192a3b4c5d6e7f8';
 
