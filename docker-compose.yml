@@ -1,3 +1,4 @@
+# docker-compose.yml
 version: '3.9'
 
 services:
@@ -7,5 +8,23 @@ services:
       - .:/var/www/html
       - "./.htaccess:/var/www/html/.htaccess"
     ports:
-      - 9300:80
- 
+      - "9300:80"
+    depends_on:
+      - db
+    environment:
+      WP_BASE: "http://host.docker.internal:8080"   # keep WP outside, docs only
+      WP_CPT: "docs,betterdocs"
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ci3app
+    ports:
+      - "3310:3306"   # Navicat connects on localhost, 3310
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

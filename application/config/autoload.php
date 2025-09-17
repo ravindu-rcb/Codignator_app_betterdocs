@@ -14,7 +14,7 @@ $autoload['packages'] = array();
 |--------------------------------------------------------------------------
 | Example: array('database', 'session')
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database');
 
 /*
 |--------------------------------------------------------------------------
