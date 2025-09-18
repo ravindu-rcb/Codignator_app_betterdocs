@@ -7,6 +7,8 @@
 <title><?php echo isset($page_title) ? $page_title : 'App'; ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('application/config/assets/css/custom.css'); ?>">
+
 <style>
   :root { --bg:#0b0f19; --panel:#12172a; --panel-2:#0f1426; --text:#e8ecf4; --muted:#9fb0d0; --accent:#6aa1ff; --accent-2:#8a5cff; --shadow:rgba(0,0,0,0.28); }
   *{box-sizing:border-box} html,body{height:100%}
@@ -51,6 +53,7 @@
   .muted{color:var(--muted);font-size:13px;margin-top:10px}
   @media (max-width:780px){ .row{grid-template-columns:1fr} .drawer{width:92vw} }
 </style>
+
 </head>
 <body>
 

@@ -1,0 +1,52 @@
+/* BetterDocs content inside the drawer */
+#drawer .content * { box-sizing: border-box; }
+
+/* Make all videos the same size */
+#drawer .content iframe,
+#drawer .content video {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16/9;
+  margin: 0; /* remove odd inner margins */
+}
+
+/* Remove the big default margins WordPress puts on wrapper figures */
+#drawer .content figure.wp-block-embed,
+#drawer .content figure.wp-block-video {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 12px 0 !important; /* single, consistent gap below each video */
+  padding: 0;
+}
+
+/* Tweak the inner wrapper WP uses for responsive iframes */
+#drawer .content .wp-block-embed__wrapper {
+  margin: 0 !important;
+}
+
+/* tighten headings so they do not create a larger step */
+#drawer .content h1,
+#drawer .content h2,
+#drawer .content h3 {
+  margin: 12px 0 8px 0; /* smaller, consistent heading spacing */
+}
+
+/* BetterDocs images inside the drawer */
+#drawer .content img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 0 12px 0 !important; /* same spacing as videos */
+  border-radius: 4px; /* optional: small rounded corners */
+}
+
+/* Reset figure wrapper margins around images */
+#drawer .content figure.wp-block-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 12px 0 !important;
+  padding: 0;
+}
